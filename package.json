@@ -1,0 +1,25 @@
+{
+  "name": "express-backend-api",
+  "version": "1.0.0",
+  "description": "API Node with Express framework",
+  "main": "src/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MTavaresBorges/express-backend-api.git"
+  },
+  "keywords": [
+    "api",
+    "node",
+    "express",
+    "zod"
+  ],
+  "author": "Matheus Tavares Borges",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MTavaresBorges/express-backend-api/issues"
+  },
+  "homepage": "https://github.com/MTavaresBorges/express-backend-api#readme"
+}
