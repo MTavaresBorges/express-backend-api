@@ -1,15 +1,13 @@
 // const express = require('express')
 import express from 'express'
+import userRouter from './routers/useRouter.js'
+import productRouter from './routers/productRouter.js'
+
 const app = express()
 const port = 3000
 
-app.get('/', (req, res) => {
-  res.send('Hello Big World!')
-})
-
-app.get('/user', (req, res) => {
-  res.json({nome: "Matheus", email: "matheus@gmail.com"})
-})
+app.use('/user', userRouter)
+app.use('/product', productRouter)
 
 app.listen(port, () => {
   console.log(`Example app listening on port http://localhost:${port}`)
