@@ -2,15 +2,14 @@
 import express from 'express'
 import userRouter from './routers/useRouter.js'
 import productRouter from './routers/productRouter.js'
-import {end, soma} from './testeExport.js'
+import { PORT, HOST, ENVIRONMENT } from './config.js'
 
 const app = express()
-const port = 3000
+const port = PORT
 
 app.use('/user', userRouter)
 app.use('/product', productRouter)
 
 app.listen(port, () => {
-  console.log(`Example app listening on port http://localhost:${port}`)
-  console.log(soma(5, 3))
-})
+  console.log(`Example app listening on environment ${ENVIRONMENT} ${ ENVIRONMENT == 'production' ? HOST : HOST+':'+PORT}`)
+}) 
