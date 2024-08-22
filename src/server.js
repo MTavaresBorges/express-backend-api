@@ -10,6 +10,6 @@ const port = PORT
 app.use('/user', userRouter)
 app.use('/product', productRouter)
 
-app.listen(port, () => {
+app.listen(PORT, () => {
   console.log(`Example app listening on environment ${ENVIRONMENT} ${ ENVIRONMENT == 'production' ? HOST : HOST+':'+PORT}`)
 }) 
