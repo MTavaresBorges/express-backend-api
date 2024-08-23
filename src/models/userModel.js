@@ -18,6 +18,20 @@ const create = () => {
 
 }
 
+export const getById = async (id) => {
+    const user = await prisma.user.findUnique({
+        where: {
+            id
+        },
+        select: {
+            id: true,
+            name: true,
+            email: true
+        }
+    })
+    return user
+}
+
 export default {
     create
 }

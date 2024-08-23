@@ -9,10 +9,10 @@ import userById from '../controllers/user/userById.js'
 const router = express.Router()
 
 router.get('/list', userList)
-router.get('/', userById)
+router.get('/:id', userById)
 router.post('/', createUser)
-router.delete('/', deleteUser)
-router.put('/', editUser)
-router.patch('/', editNameUser)
+router.delete('/:id', deleteUser)
+router.put('/:id', editUser)
+router.patch('/:id', editNameUser)
 
 export default router
